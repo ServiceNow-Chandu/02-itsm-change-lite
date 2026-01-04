@@ -1,0 +1,26 @@
+# Architecture Overview – Change Lite
+
+## Application Scope
+- Scoped application built using ServiceNow Studio
+- Extends OOB Change Request table safely
+
+## Data Model
+- change_request (extended)
+  - u_risk_score (Integer)
+  - u_major_change (Boolean)
+  - u_emergency_justification (String)
+
+## Core Flow
+1. Change created or updated
+2. Risk score calculated via Script Include
+3. Risk level derived (Low / Moderate / High)
+4. CAB approval flow triggered when required
+5. Emergency changes bypass approval
+6. Blackout schedule validated before save
+7. Incident-linked changes created via UI Action
+
+## Design Principles
+- Minimal OOB modification
+- Modular server-side logic
+- Modern Flow Designer usage
+- Clear separation of concerns
