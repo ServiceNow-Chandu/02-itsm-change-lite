@@ -1,0 +1,8 @@
+# Lessons Learned – Change Lite
+
+- GitHub source control should be enabled before development begins
+- Scoped applications provide safer customization boundaries
+- Flow Designer is preferred over legacy workflows
+- Server-side validation is critical for data integrity
+- Change governance can be automated without slowing delivery
+- Clear documentation strengthens interview discussions
