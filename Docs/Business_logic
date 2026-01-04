@@ -1,0 +1,29 @@
+# Business Logic – Change Lite
+
+## Risk Calculation
+- Script Include evaluates:
+  - Impact
+  - Urgency
+  - Category
+- Produces numeric risk score and risk level
+
+## Approval Logic
+- Normal changes with Moderate or High risk
+  require CAB approval
+- Approval handled using Flow Designer
+- Rejected changes automatically closed
+
+## Emergency Changes
+- Auto-approved
+- Mandatory justification enforced via UI Policy
+- Server-side validation ensures safety
+
+## Blackout Enforcement
+- GlideSchedule used to validate blackout window
+- Non-emergency changes blocked during blackout
+- Emergency changes bypass blackout
+
+## Incident to Change
+- UI Action on Incident form
+- Copies relevant fields into Change
+- Provides traceability and faster remediation
